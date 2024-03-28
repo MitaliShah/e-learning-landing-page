@@ -55,10 +55,7 @@ $dark-pink: hsl(341, 92%, 62%);
 $white: hsl(0, 0%, 98%);
 
 /* GRADIENT */
-$pink-gradient: linear-gradient(
-  hsl(322, 87%, 55%, 0.1),
-  hsl(13, 100%, 64%, 0.1)
-);
+$pink-gradient: linear-gradient(hsl(13, 100%, 64%, 10), hsl(322, 87%, 55%, 10));
 
 $purple-gradient: linear-gradient(
   hsl(237, 100%, 64%, 0.8),
@@ -72,11 +69,11 @@ $purple-gradient: linear-gradient(
   font-weight: bold;
   text-decoration: none;
   border-radius: 28px;
+  max-width: fit-content;
 }
 
 body {
   background-color: $white;
-  margin: 16px;
   margin-bottom: 0px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
@@ -84,12 +81,17 @@ body {
   font-style: normal;
 }
 
+header,
+main {
+  margin: 16px;
+}
+
 .max-width-wrapper {
   max-width: 23.43rem;
   margin: 0 auto;
 }
 
-.header-container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,4 +102,36 @@ body {
   .top {
     @include btn();
   }
+  .bottom {
+    @include btn($purple-gradient);
+  }
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin-top: 38px;
+
+  .header-intro-chunk {
+    display: flex;
+    flex-direction: column;
+    .header-title {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .header-content {
+      margin-top: 26px;
+      margin-bottom: 24px;
+    }
+    .intro-btn {
+      @include btn($pink-gradient, 15px 37px);
+    }
+  }
+}
+
+footer {
+  background-color: $dark-purple;
+  padding: 36px 16px;
 }
