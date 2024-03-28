@@ -1,0 +1,70 @@
+/** RESET **/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* PRIMARY */
+
+$light-purple: hsl(234, 25%, 52%);
+$dark-purple: hsl(233, 54%, 16%);
+$gray: hsl(232, 10%, 56%);
+$light-pink: hsl(341, 100%, 83%);
+$dark-pink: hsl(341, 92%, 62%);
+
+/* NEUTRAL */
+$white-color: hsl(0, 0%, 98%);
+
+/* GRADIENT */
+$pink-gradient: linear-gradient(
+  hsl(322, 87%, 55%, 0.1),
+  hsl(13, 100%, 64%, 0.1)
+);
+
+$purple-gradient: linear-gradient(
+  hsl(237, 100%, 64%, 0.8),
+  hsl(322, 87%, 55%, 0.8)
+);
+
+body {
+  background-color: $light-purple;
+}
