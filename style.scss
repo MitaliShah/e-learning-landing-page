@@ -81,9 +81,8 @@ body {
   font-style: normal;
 }
 
-header,
-main {
-  margin: 16px;
+header {
+  margin: 16px 16px 0 16px;
 }
 
 .max-width-wrapper {
@@ -109,6 +108,11 @@ main {
 
 /* Main */
 
+.intro-container,
+.cards {
+  margin: 0 16px;
+}
+
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -130,6 +134,10 @@ main {
     .intro-btn {
       @include btn($pink-gradient, 15px 37px);
     }
+  }
+
+  .tablet-header-img {
+    display: none;
   }
 }
 
@@ -188,4 +196,46 @@ main {
 footer {
   background-color: $dark-purple;
   padding: 36px 16px;
+}
+
+@media (min-width: 48rem) {
+  .max-width-wrapper {
+    max-width: 48rem;
+  }
+
+  .intro-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+
+    .header-intro-image {
+      position: relative;
+      overflow: hidden;
+      margin-right: -120px;
+
+      .mobile-header-img {
+        display: none;
+      }
+
+      .tablet-header-img {
+        display: inline-block;
+        position: absolute;
+        top: -120px;
+        height: auto;
+        left: 50px;
+        height: 35vh;
+        object-fit: fill;
+      }
+    }
+  }
+
+  .cards {
+    margin-top: 90px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 32px;
+  }
+}
+
+@media (min-width: 90rem) {
 }
