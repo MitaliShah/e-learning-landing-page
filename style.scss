@@ -295,4 +295,16 @@ footer {
   .footer a {
     margin-right: 165px;
   }
+
+  .top:hover {
+    background-color: $light-purple;
+  }
+
+  .intro-btn:hover {
+    opacity: 0.5;
+  }
+
+  .bottom:hover {
+    background-color: hsl(341, 100%, 83%);
+  }
 }
