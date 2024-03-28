@@ -52,7 +52,7 @@ $light-pink: hsl(341, 100%, 83%);
 $dark-pink: hsl(341, 92%, 62%);
 
 /* NEUTRAL */
-$white-color: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 98%);
 
 /* GRADIENT */
 $pink-gradient: linear-gradient(
@@ -65,6 +65,39 @@ $purple-gradient: linear-gradient(
   hsl(322, 87%, 55%, 0.8)
 );
 
+@mixin btn($col: $dark-purple, $pad: 9px 24px) {
+  background: $col;
+  padding: $pad;
+  color: $white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 28px;
+}
+
 body {
-  background-color: $light-purple;
+  background-color: $white;
+  margin: 16px;
+  margin-bottom: 0px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.max-width-wrapper {
+  max-width: 23.43rem;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 89px;
+  }
+  .top {
+    @include btn();
+  }
 }
